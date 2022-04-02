@@ -132,9 +132,10 @@ async function deleteItems(id) {
     method: 'DELETE',
   })
   .then(res => res.text()) 
-  .then(res => console.log(res))
+  .then(res => console.log(res));
+  location.reload()
   await FetchApi();
-
+  subtotalShow();
   setTimeout( function(){
       subtotalShow();
       console.log("Hello");

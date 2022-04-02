@@ -152,12 +152,27 @@ function appendprod(el) {
     container.append(div);
 
 
-  //<----------Adding to cart here--------->
-  function addtoCart(data) {
-    cartArr.push(data);
-    alert(data.name + "  " + "Added");
-    localStorage.setItem("CartItems", JSON.stringify(cartArr));
+ //<-----Adding to cart here-------->
+ async function addtoCart(data) {
+  cartData = JSON.stringify(data);
+  console.log({ cartData: cartData });
+  let res = await fetch("http://localhost:5000/carts/", {
+    method: "POST",
+    body: cartData,
+
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  // console.log("res" , res);
+
+  let viewData = await res.json();
+
+  if (viewData) {
+    alert(`${data.productName}  Added in your cart`);
   }
+  console.log({ viewData: viewData });
+}
 
   //<----------Adding to wishlist here--------->
 

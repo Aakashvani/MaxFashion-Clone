@@ -27,13 +27,13 @@ console.log({regiseter : register_data});
 
       console.log("res" , res);
 
-    let data = await res.json();
-    console.log({data: data});
-      localStorage.setItem('userName', (data.name))
-    if(data){
+    // // let data = await res.json();
+    // console.log({data: data});
+    //   localStorage.setItem('userName', (data.name))
+    // if(data){
 
-      alert("congratulations! your sign-up has successful.")
-    }
+    //   alert("congratulations! your sign-up has successful.")
+    // }
     window.location.href = "login.html";
   } catch (err) {
     alert(err.message)

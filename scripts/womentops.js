@@ -10,7 +10,7 @@ async function FetchApi() {
     console.log(data);
     displayData(data);
   } catch (err) {
-    console.log("error", error);
+    console.log("error", err);
   }
 }
 
