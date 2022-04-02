@@ -34,14 +34,6 @@
 
  }
 
-//  category: "Women "
-// color: "Blue "
-// imageURL: "https://lmsin.net/cdn-cgi/image/h=831,w=615,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011069467-Blue-LIGHTBLUE-1000011069467-10032022_01-2100.jpg"
-// overview: "Comfortable and elegant, this printed T-shirt with a round neck and short sleeves is a perfect addition to your casual wardrobe. Type : Tees,Design : Printed,Neckline : Round Neck,Style : Casual"
-// price: "299 "
-// productName: "MAX Printed Round Neck T-shirt"
-// sub_category: "Tops "
-// _id: "6244480900b2438e325e2d23"
 
 function displayData(men_shirt){
 
@@ -115,13 +107,26 @@ men_shirt.map((data) => {
 
 
  //<-----Adding to cart here-------->
- function addtoCart(data) {
-  cartArr.push(data)
-  alert(data.name + "  " + "Added")
-  localStorage.setItem("CartItems", JSON.stringify(cartArr))
+ async function addtoCart(data) {
+  cartData = JSON.stringify(data);
+  console.log({ cartData: cartData });
+  let res = await fetch("http://localhost:5000/carts/", {
+    method: "POST",
+    body: cartData,
 
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  // console.log("res" , res);
+
+  let viewData = await res.json();
+
+  if (viewData) {
+    alert(`${data.productName}  Added in your cart`);
+  }
+  console.log({ viewData: viewData });
 }
-
  //<----------Adding to wishlist here--------->
 
  function addtoWishlist(data) {
