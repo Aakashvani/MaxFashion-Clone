@@ -120,8 +120,8 @@ li:hover {
 /* -----women,men,girl,boys-banner CSS----- */
 /* ************************************************************************************************************************ */
 #main-banner-container {
-  padding: 100px;
-  margin-top: 40px;
+  padding: 3%;
+  margin-top: 24px;
 }
 .flexi{
   width: 100%;border: 1px solid white;display: grid;
@@ -208,11 +208,13 @@ li:hover {
   left: 0;
   right: 0;
   transition: all 0.3s ease-in-out;
+  
 }
 footer  hr {
   max-width: 100%;
   margin: auto;
   border: 1px solid rgb(235, 235, 235);
+  margin-top:5%
 }
 div#subscription-container\ flex {
   display: flex;
@@ -223,9 +225,15 @@ div#subscription-container\ flex {
   line-height: 50px;
 }
 /* subscribe-form-css  */
+#subscription-container{
+  display: flex;
+  justify-content: space-around;
+  padding-top:1%;
+}
 .input-sub-box,
 .btn-sub-box {
   padding: 10px;
+  
 }
 .input-sub-box {
   width: 70%;

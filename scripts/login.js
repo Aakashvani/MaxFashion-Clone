@@ -77,7 +77,8 @@ let getUser = async (username, token) => {
 
     let data = await res.json();
     console.log("data:", data);
-
+    let x = res.text();
+    alert(x);
     showUser(data.username);
   } catch (err) {
     console.log(err);

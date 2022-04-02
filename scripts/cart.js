@@ -129,33 +129,33 @@ function hellofunction(price, id) {
 async function deleteItems(id) {
   console.log(id);
   await fetch(`http://localhost:5000/carts/${id}`, {
-    method: 'DELETE',
+    method: "DELETE",
   })
-  .then(res => res.text()) 
-  .then(res => console.log(res));
-  location.reload()
+    .then((res) => res.text())
+    .then((res) => console.log(res));
+  location.reload();
   await FetchApi();
   subtotalShow();
-  setTimeout( function(){
-      subtotalShow();
-      console.log("Hello");
-    },3000)
- 
+  setTimeout(function () {
+    subtotalShow();
+    console.log("Hello");
+  }, 3000);
 }
 
 //<-----Cart length----->
 function cartLength(cartitems) {
   let count = cartitems.length;
-   if(count == 0){
-     alert("Your cart is empty please add some product");
-     window.location.href = "../index.html"
-   }
+  if (count == 0) {
+    alert("Your cart is empty please add some product");
+    window.location.href = "../index.html";
+  }
   return count;
 }
 
 // <--------SUB TOTOAL SHOW --------->
+var totalSum = 0;
 function subtotalShow() {
-  var totalSum = 0;
+  totalSum = 0;
   for (let keys in obj) {
     totalSum += obj[keys];
   }
@@ -168,16 +168,14 @@ function subtotalShow() {
 //<----------- Apply Coupon here------------->
 let applied = false;
 document.querySelector("form").addEventListener("submit", function (event) {
-  event.preventDefault();
+  // event.preventDefault();
 
   var coupon_no = document.querySelector("#CouponInput").value;
   if (coupon_no == "masai30" && applied == false) {
     totalSum = Math.floor((70 / 100) * totalSum);
     document.querySelector(
       "#subtotal"
-    ).textContent = `Subtotal: ₹ ${totalSum}.00 (${cartLength(
-      cartitems
-    )} items)`;
+    ).textContent = `Subtotal: ₹ ${totalSum}.00 (${cartLength(cartitems)} items)`;
     alert("Coupon Applied Successfully");
     applied = true;
   } else {

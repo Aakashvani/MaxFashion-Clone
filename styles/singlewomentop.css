@@ -51,6 +51,10 @@
     color: white;
     font-weight: bold;
     font-size: large;
+    cursor: pointer;
+  }
+  #basket:hover{
+    background-color:#091277 ;
   }
   #favourite {
     border: 0;
