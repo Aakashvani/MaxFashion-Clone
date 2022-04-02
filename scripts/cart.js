@@ -3,7 +3,7 @@ var obj = {};
 var cartitems;
 //<---------------------------------------------------------->
 
-let url = `http://localhost:5000/carts`;
+let url = `https://max-fashion-backend.herokuapp.com/carts`;
 
 async function FetchApi() {
   try {
@@ -118,28 +118,17 @@ function hellofunction(price, id) {
   obj[id] = price;
   subtotalShow(); //calling and refreshing subtotal price
 }
-// let sum = 0;
-// setTimeout( function(){
-
-//   console.log(sum)
-
-// },10000)
 
 //<------ Delete Items here----------->
 async function deleteItems(id) {
   console.log(id);
-  await fetch(`http://localhost:5000/carts/${id}`, {
+  await fetch(`https://max-fashion-backend.herokuapp.com/carts/${id}`, {
     method: "DELETE",
   })
     .then((res) => res.text())
     .then((res) => console.log(res));
   location.reload();
-  await FetchApi();
-  subtotalShow();
-  setTimeout(function () {
-    subtotalShow();
-    console.log("Hello");
-  }, 3000);
+  
 }
 
 //<-----Cart length----->
@@ -175,7 +164,9 @@ document.querySelector("form").addEventListener("submit", function (event) {
     totalSum = Math.floor((70 / 100) * totalSum);
     document.querySelector(
       "#subtotal"
-    ).textContent = `Subtotal: ₹ ${totalSum}.00 (${cartLength(cartitems)} items)`;
+    ).textContent = `Subtotal: ₹ ${totalSum}.00 (${cartLength(
+      cartitems
+    )} items)`;
     alert("Coupon Applied Successfully");
     applied = true;
   } else {

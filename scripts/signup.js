@@ -1,4 +1,3 @@
-//api link - https://masai-api-mocker.herokuapp.com/ //register api link --> https://masai-api-mocker.herokuapp.com/auth/register //Login api link --> https://masai-api-mocker.herokuapp.com/auth/login
 
 //   Registering user
 document.querySelector("form").addEventListener("submit", Register);
@@ -14,7 +13,7 @@ async function Register(event){
     register_data = JSON.stringify(register_data);
 console.log({regiseter : register_data});
     let res = await fetch(
-      "http://localhost:5000/register",
+      "https://max-fashion-backend.herokuapp.com/register",
       {
         method: "POST",
         body: register_data,
@@ -27,13 +26,7 @@ console.log({regiseter : register_data});
 
       console.log("res" , res);
 
-    // // let data = await res.json();
-    // console.log({data: data});
-    //   localStorage.setItem('userName', (data.name))
-    // if(data){
-
-    //   alert("congratulations! your sign-up has successful.")
-    // }
+  
     window.location.href = "login.html";
   } catch (err) {
     alert(err.message)

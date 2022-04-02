@@ -1,6 +1,6 @@
 
 let id=localStorage.getItem("id")
-let url = `http://localhost:5000/mens/${id}`;
+let url = `https://max-fashion-backend.herokuapp.com/mens/${id}`;
 console.log(id);
 async function FetchApi() {
 
@@ -118,12 +118,28 @@ function appendprod(el) {
     container.append(div);
 
 
-  //<----------Adding to cart here--------->
-  function addtoCart(data) {
-    cartArr.push(data);
-    alert(data.name + "  " + "Added");
-    localStorage.setItem("CartItems", JSON.stringify(cartArr));
+  //<-----Adding to cart here-------->
+ async function addtoCart(data) {
+  cartData = JSON.stringify(data);
+  console.log({ cartData: cartData });
+  let res = await fetch("https://max-fashion-backend.herokuapp.com/carts/", {
+    method: "POST",
+    body: cartData,
+
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  
+
+  let viewData = await res.json();
+
+  if (viewData) {
+    alert(`${data.productName}  Added in your cart`);
   }
+  console.log({ viewData: viewData });
+}
 
   //<----------Adding to wishlist here--------->
 

@@ -62,13 +62,12 @@ function payNow() {
   console.log(cardHolderName, cardNumber, expMM, expYear, cvv);
 
   if (
-    (cardHolderName = "") ||
-    (cardNumber = "") ||
-    expMM == "" ||
-    expYear == ""
-  ) {
+    (cardHolderName == "") || (cardNumber == "")) {
     alert("Please Fill All the Details");
-  } else if (cvv == 123) {
+  }else if(expMM == "MM"  || expYear == "YYYY") {
+    alert("Please Fill All the Details");
+  } 
+  else if (cvv == 123) {
     alert("Congratulation! your payment is succesful");
     window.location.href = "thankyou.html";
   } else {
@@ -78,7 +77,7 @@ function payNow() {
 
 // cart right side CART details
 
-let url = `http://localhost:5000/carts`;
+let url = `https://max-fashion-backend.herokuapp.com/carts`;
 
 var cartItems;
 async function FetchApi() {

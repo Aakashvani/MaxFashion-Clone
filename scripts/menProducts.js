@@ -1,6 +1,6 @@
 
 
- let url = `http://localhost:5000/mens`;
+ let url = `https://max-fashion-backend.herokuapp.com/mens`;
 
  async function FetchApi() {
  
@@ -110,7 +110,7 @@ men_shirt.map((data) => {
  async function addtoCart(data) {
   cartData = JSON.stringify(data);
   console.log({ cartData: cartData });
-  let res = await fetch("http://localhost:5000/carts/", {
+  let res = await fetch("https://max-fashion-backend.herokuapp.com/carts/", {
     method: "POST",
     body: cartData,
 

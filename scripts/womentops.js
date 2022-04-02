@@ -1,6 +1,6 @@
 /// Womens all top and tees products appended by this file. ///
 
-let url = `http://localhost:5000/womens`;
+let url = `https://max-fashion-backend.herokuapp.com/womens`;
 
 async function FetchApi() {
   try {
@@ -94,7 +94,7 @@ function displayData(women_top) {
   async function addtoCart(data) {
     cartData = JSON.stringify(data);
     console.log({ cartData: cartData });
-    let res = await fetch("http://localhost:5000/carts/", {
+    let res = await fetch("https://max-fashion-backend.herokuapp.com/carts/", {
       method: "POST",
       body: cartData,
 
