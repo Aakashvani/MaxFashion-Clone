@@ -38,8 +38,9 @@ This is a project of unit 3 project. In this unit we mainly focus on Frontend si
 - [Akashy Kumar](https://github.com/Akshay-Singh-Rajput)
 - [Aditya Choubey](https://github.com/Aadi0706)
 - [Roshan Arikar ](https://github.com/roshanarikar)
-<!-- - [Abhishek]() -->
-<!-- - [Abhishek]  if anyone knows his id then plz add him --> 
+- [Abhicoder01](https://github.com/Abhicoder01)
+- [Roshan Arikar ](https://github.com/roshanarikar)
+- [Manjeet Singh](https://github.com/manjeetsingh100001)
 
 
 ## Screenshots
