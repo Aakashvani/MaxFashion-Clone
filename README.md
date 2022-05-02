@@ -2,7 +2,7 @@
 ![Logo](https://upload.wikimedia.org/wikipedia/commons/b/b0/Logo_of_Max_Fashion_and_Accessories%2C_March_2018.png)
 
 
-# Max Fashion - Unit 4 Backend Project
+# Max Fashion - Unit 3 Backend Project
 
 Max Fashion is an Emirati fashion brand under the banner of the Mumbai based Landmark Group. The brand was first launched in May, 2004, in Middle East in UAE.
 
