@@ -39,8 +39,7 @@ This is a project of unit 3 project. In this unit we mainly focus on Frontend si
 - [Aditya Choubey](https://github.com/Aadi0706)
 - [Roshan Arikar ](https://github.com/roshanarikar)
 - [Abhicoder01](https://github.com/Abhicoder01)
-- [Roshan Arikar ](https://github.com/roshanarikar)
-- [Manjeet Singh](https://github.com/manjeetsingh100001)
+- [Manjeet Singh](https://github.com/manjeetsingh100001) - Contributed in Unit 4 Only.
 
 
 ## Screenshots
