@@ -34,10 +34,10 @@ This is a project of unit 3 project. In this unit we mainly focus on Frontend si
 
 ## Team Members and Contributors
 
+- [Aakash Kumar](https://github.com/Aakashvani)
 - [Akashy Kumar](https://github.com/Akshay-Singh-Rajput)
 - [Aditya Choubey](https://github.com/Aadi0706)
 - [Roshan Arikar ](https://github.com/roshanarikar)
-- [Aakash Kumar](https://github.com/Aakashvani)
 <!-- - [Abhishek]() -->
 <!-- - [Abhishek]  if anyone knows his id then plz add him --> 
 
